@@ -71,7 +71,7 @@ public class CameraActivity extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("https://www.autokelly.cz/Search2/Product/Data")
                 .post(body)
-                .addHeader("cookie", "LKQEshop=CatalogSwitchViewType%3DRow%26Login%3DTrue; ASP.NET_SessionId=qw0qogymc2pxia3w4wmwf2fb")
+                .addHeader("cookie", "LKQEshop=CatalogSwitchViewType%3DRow%26Login%3DFalse; ASP.NET_SessionId=qw0qogymc2pxia3w4wmwf2fb")
                 .addHeader("Accept", "application/json, text/plain, */*")
                 .addHeader("Accept-Language", "en-US,en;q=0.5")
                 .addHeader("Accept-Encoding", "gzip, deflate, br")
@@ -90,7 +90,7 @@ public class CameraActivity extends AppCompatActivity {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                e.printStackTrace();
+                Log.e("CameraActivity", "HTTP request failed", e);
             }
 
             @Override
@@ -105,8 +105,8 @@ public class CameraActivity extends AppCompatActivity {
                         CameraActivity.this.runOnUiThread(() -> txt.setText(damn));
 
                     }catch(NullPointerException e) {
-                        e.printStackTrace();
-                        CameraActivity.this.runOnUiThread(() -> txt.setText("Zkuste to znovu"));
+                        Log.e("CameraActivity", "Response parsing failed", e);
+                        CameraActivity.this.runOnUiThread(() -> txt.setText(getString(R.string.try_again)));
 
                     }
                 }

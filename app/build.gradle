@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.kellycode'
-    compileSdk 32
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.kellycode"
         minSdk 19
-        targetSdk 31
+        targetSdk 36
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -32,13 +32,13 @@ android {
 
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    implementation "com.squareup.okhttp3:okhttp:4.7.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
     implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.19.1'
 }
