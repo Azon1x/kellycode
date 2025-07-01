@@ -11,4 +11,13 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="try_again">Zkuste to znovu</string>
+    <string name="scan_code">Naskenujte čárový kód</string>
+    <string name="enter_the_code_again">Zadat kód znovu</string>
+    <string name="scan_again">Skenovat znovu</string>
+    <string name="KellyCode">Čtečka kódů</string>
+    <string name="theme">theme</string>
+    <string name="scan">Skenovat</string>
+    <string name="enter_the_code_manually">Zadejte kód ručně</string>
+    <string name="or">nebo</string>
+    <string name="scan_the_barcode">Naskenujte čárový kód</string>
 </resources>

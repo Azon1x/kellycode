@@ -5,21 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".CameraActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar_top2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.KellyCode.AppBarOverlay">
+        android:theme="?attr/actionBarTheme">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#FFEB3B"
-            app:popupTheme="@style/Theme.KellyCode.PopupOverlay" />
+            android:theme="@style/Theme.KellyCode.Yellow" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -35,43 +34,69 @@
         app:maskColor="#66000000" />
 
     <TextView
-        android:id="@+id/output"
+        android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/scanner_view"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Naskenujte čárový kód"
-        android:textColor="@android:color/black" />
+        android:text="@string/scan_code"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
-    <Button
+    <TextView
+        android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_again"
+        android:layout_below="@id/text_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_again_manual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/output"
         android:layout_centerHorizontal="true"
-        android:text="Skenovat znovu"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter_the_code_again"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="13sp"
         android:textStyle="bold"
-        app:backgroundTint="#FFEB3B"
+        app:backgroundTint="?attr/colorPrimary"
         app:cornerRadius="20dp"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/output"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/scan_again"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:backgroundTint="?attr/colorPrimary"
+        app:cornerRadius="20dp"
+        android:visibility="invisible" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFEB3B"
         android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
         android:theme="?attr/actionBarTheme"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_alignParentBottom="true" />
+
 
 
 </RelativeLayout>
