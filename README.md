@@ -1,5 +1,5 @@
 <h2>Description</h2>
-Barcode scanner pro Android. Určeno pouze pro produkty z https://www.autokelly.cz nebo https://www.lkq.cz/ . <br>
+Barcode scanner pro Android. Určeno pouze pro produkty z https://www.autokelly.cz a https://www.lkq.cz/ . <br>
 Tato aplikace je založena na https://github.com/yuriy-budiyev/code-scanner .
 
 <h2>Preview</h2>
